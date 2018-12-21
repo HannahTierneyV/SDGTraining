@@ -62,7 +62,30 @@
     <Compile Include="Infrastructure\PeopleProRepo.cs" />
     <Compile Include="Interfaces\IPeopleProContext.cs" />
     <Compile Include="Interfaces\IPeopleProRepo.cs" />
-    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Building.cs">
+      <DependentUpon>PeopleProModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>PeopleProModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>PeopleProModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PeopleProModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PeopleProModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PeopleProModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PeopleProModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PeopleProModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PeopleProModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="PeopleProModels.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +105,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Models\PeopleProModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PeopleProModel.edmx</DependentUpon>
+      <LastGenOutput>PeopleProModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\PeopleProModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PeopleProModel.edmx</DependentUpon>
+      <LastGenOutput>PeopleProModel.cs</LastGenOutput>
+    </Content>
     <Content Include="PeopleProModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PeopleProModels.Context.cs</LastGenOutput>
@@ -105,6 +138,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="Models\PeopleProModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PeopleProModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\PeopleProModel.edmx.diagram">
+      <DependentUpon>PeopleProModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="PeopleProModels.edmx.diagram">
       <DependentUpon>PeopleProModels.edmx</DependentUpon>
