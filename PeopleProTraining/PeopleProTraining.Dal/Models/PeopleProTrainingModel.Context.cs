@@ -13,10 +13,10 @@ namespace PeopleProTraining.Dal.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PeopleProTrainingDataEntities : DbContext
+    public partial class PeopleProTrainingDataEntities1 : DbContext
     {
-        public PeopleProTrainingDataEntities()
-            : base("name=PeopleProTrainingDataEntities")
+        public PeopleProTrainingDataEntities1()
+            : base("name=PeopleProTrainingDataEntities1")
         {
         }
     

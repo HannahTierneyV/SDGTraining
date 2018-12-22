@@ -63,28 +63,30 @@
     <Compile Include="Interfaces\IPeopleProContext.cs" />
     <Compile Include="Interfaces\IPeopleProRepo.cs" />
     <Compile Include="Models\Building.cs">
-      <DependentUpon>PeopleProModel.tt</DependentUpon>
+      <DependentUpon>PeopleProTrainingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Department.cs">
-      <DependentUpon>PeopleProModel.tt</DependentUpon>
+      <DependentUpon>PeopleProTrainingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs">
-      <DependentUpon>PeopleProModel.tt</DependentUpon>
+      <DependentUpon>PeopleProTrainingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PeopleProModel.Context.cs">
+    <Compile Include="Models\Metadata.cs" />
+    <Compile Include="Models\PartialClasses.cs" />
+    <Compile Include="Models\PeopleProTrainingModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PeopleProModel.Context.tt</DependentUpon>
+      <DependentUpon>PeopleProTrainingModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PeopleProModel.cs">
+    <Compile Include="Models\PeopleProTrainingModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PeopleProModel.tt</DependentUpon>
+      <DependentUpon>PeopleProTrainingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PeopleProModel.Designer.cs">
+    <Compile Include="Models\PeopleProTrainingModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PeopleProModel.edmx</DependentUpon>
+      <DependentUpon>PeopleProTrainingModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="PeopleProModels.Context.cs">
       <AutoGen>True</AutoGen>
@@ -105,15 +107,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\PeopleProModel.Context.tt">
+    <Content Include="Models\PeopleProTrainingModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PeopleProModel.edmx</DependentUpon>
-      <LastGenOutput>PeopleProModel.Context.cs</LastGenOutput>
+      <DependentUpon>PeopleProTrainingModel.edmx</DependentUpon>
+      <LastGenOutput>PeopleProTrainingModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\PeopleProModel.tt">
+    <Content Include="Models\PeopleProTrainingModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PeopleProModel.edmx</DependentUpon>
-      <LastGenOutput>PeopleProModel.cs</LastGenOutput>
+      <DependentUpon>PeopleProTrainingModel.edmx</DependentUpon>
+      <LastGenOutput>PeopleProTrainingModel.cs</LastGenOutput>
     </Content>
     <Content Include="PeopleProModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -138,12 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Models\PeopleProModel.edmx">
+    <EntityDeploy Include="Models\PeopleProTrainingModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PeopleProModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>PeopleProTrainingModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\PeopleProModel.edmx.diagram">
-      <DependentUpon>PeopleProModel.edmx</DependentUpon>
+    <None Include="Models\PeopleProTrainingModel.edmx.diagram">
+      <DependentUpon>PeopleProTrainingModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="PeopleProModels.edmx.diagram">
