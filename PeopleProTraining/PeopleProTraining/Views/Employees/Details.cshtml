@@ -27,11 +27,27 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Department.Name)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Department.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.Building.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.Building.Name)
         </dd>
 
     </dl>

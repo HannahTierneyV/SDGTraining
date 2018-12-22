@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PeopleProTrainingDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PeopleProTrainingDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Building">
           <Key>
             <PropertyRef Name="BuildingID" />
@@ -73,8 +73,7 @@
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PeopleProTrainingDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -103,10 +102,10 @@
           <Key>
             <PropertyRef Name="EmployeeID" />
           </Key>
-          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DepartmentID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="DepartmentID" Nullable="false" Type="Int32" />
           <NavigationProperty Name="Department" Relationship="Self.FK_dbo_Employee_dbo_Department_DepartmentID" FromRole="Employee" ToRole="Department" />
         </EntityType>
         <Association Name="FK_dbo_Department_dbo_Building_BuildingID">
@@ -124,10 +123,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Employee_dbo_Department_DepartmentID">
-          <End Role="Department" Type="Self.Department" Multiplicity="1">
+          <End Type="Self.Department" Multiplicity="1" Role="Department">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <End Type="Self.Employee" Multiplicity="*" Role="Employee" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="DepartmentID" />
@@ -146,8 +145,8 @@
             <End Role="Department" EntitySet="Departments" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_Employee_dbo_Department_DepartmentID" Association="Self.FK_dbo_Employee_dbo_Department_DepartmentID">
-            <End Role="Department" EntitySet="Departments" />
-            <End Role="Employee" EntitySet="Employees" />
+            <End EntitySet="Departments" Role="Department" />
+            <End EntitySet="Employees" Role="Employee" />
           </AssociationSet>
         </EntityContainer>
       </Schema>

@@ -7,9 +7,9 @@
       <Diagram DiagramId="5ba40a55bd734fcba0f1e486c1199162" Name="Diagram1">
         <EntityTypeShape EntityType="PeopleProTrainingDataModel.Building" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="PeopleProTrainingDataModel.Department" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PeopleProTrainingDataModel.Employee" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeopleProTrainingDataModel.Employee" PointX="5.25" PointY="1" Width="1.5" IsExpanded="true" />
         <AssociationConnector Association="PeopleProTrainingDataModel.FK_dbo_Department_dbo_Building_BuildingID" ManuallyRouted="false" />
-        <AssociationConnector Association="PeopleProTrainingDataModel.FK_dbo_Employee_dbo_Department_DepartmentID" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="PeopleProTrainingDataModel.FK_dbo_Employee_dbo_Department_DepartmentID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

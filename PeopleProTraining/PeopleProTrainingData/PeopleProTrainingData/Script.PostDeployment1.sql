@@ -26,15 +26,15 @@ VALUES (Name, Budget, BuildingID);
 
 MERGE INTO Employee AS Target
 USING (VALUES
-		(1, 'Donnie', 'Tibbetts', 2),
-		(2, 'Liza', 'Guzman', 4),
-		(3, 'Phil', 'Catlett', 1),
-		(4, 'Judy', 'Simmons', 3),
-		(5, 'Alexandria', 'Walters', 2),
-		(6, 'Simone', 'Smith', 3)
+		(1, 'Donnie', 'Tibbetts', 'Analyst', 2),
+		(2, 'Liza', 'Guzman', 'Media Specialist', 4),
+		(3, 'Phil', 'Catlett', 'Accountant', 1),
+		(4, 'Judy', 'Simmons', 'Secretary', 3),
+		(5, 'Alexandria', 'Walters', 'Manager', 2),
+		(6, 'Simone', 'Smith', 'Assistant Manager', 3)
 )
-AS Source (EmployeeID, FirstName, LastName, DepartmentID)
+AS Source (EmployeeID, FirstName, LastName, Position, DepartmentID)
 ON Target.EmployeeID = Source.EmployeeID
 WHEN NOT MATCHED BY TARGET THEN
-INSERT (FirstName, LastName, DepartmentID)
-VALUES (FirstName, LastName, DepartmentID);
+INSERT (FirstName, LastName, Position, DepartmentID)
+VALUES (FirstName, LastName, Position, DepartmentID);
