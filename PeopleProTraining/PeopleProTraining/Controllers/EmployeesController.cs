@@ -12,7 +12,7 @@ namespace PeopleProTraining.Controllers
 {
     public class EmployeesController : Controller
     {
-        private PeopleProTrainingDataEntities db = new PeopleProTrainingDataEntities();
+        private PeopleProTrainingDataEntities1 db = new PeopleProTrainingDataEntities1();
 
         // GET: Employees
         public ActionResult Index()

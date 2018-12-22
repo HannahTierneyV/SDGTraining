@@ -15,17 +15,25 @@ namespace PeopleProTraining.Dal.Models
 
         [StringLength(100)]
         public string Position;
+
+        [Display(Name = "Department")]
+        public int DepartmentID;
     }
 
     public class DepartmentMetadata
     {
         [StringLength(50)]
+        [Display(Name="Department")]
         public string Name;
+
+        [Display(Name = "Building")]
+        public int BuildingID;
     }
 
     public class BuildingMetadata
     {
         [StringLength(50)]
+        [Display(Name="Building")]
         public string Name;
 
         [Display(Name = "Opens")]
