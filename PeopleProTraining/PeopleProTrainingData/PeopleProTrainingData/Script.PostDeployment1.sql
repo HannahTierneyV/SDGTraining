@@ -1,9 +1,9 @@
 ﻿MERGE INTO Building AS Target
 USING (VALUES
-		(1, 'Dearborn', '09AM', '06PM'),
-		(2, 'Graf', '10AM', '05PM'),
-		(3, 'Batcheller', '08AM', '04PM'),
-		(4, 'Rogers', '09AM', '06PM')
+		(1, 'Dearborn', '09:00 AM', '06:00 PM'),
+		(2, 'Graf', '10:00 AM', '05:00 PM'),
+		(3, 'Batcheller', '08:00 AM', '04:00 PM'),
+		(4, 'Rogers', '09:00 AM', '06:00 PM')
 )
 AS Source (BuildingID, Name, OpenTime, CloseTime)
 ON Target.BuildingID = Source.BuildingID

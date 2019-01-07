@@ -37,12 +37,10 @@ namespace PeopleProTraining.Dal.Models
         public string Name;
 
         [Display(Name = "Opens")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm tt}")]
         [RegularExpression(@"((([0-1][0-9])|(2[0-3]))(:[0-5][0-9])?)", ErrorMessage = "Time must be between 00:00 to 11:59 AM/PM")]
         public Nullable<System.TimeSpan> OpenTime;
 
         [Display(Name = "Closes")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm tt}")]
         [RegularExpression(@"((([0-1][0-9])|(2[0-3]))(:[0-5][0-9])?)", ErrorMessage = "Time must be between 00:00 to 11:59 AM/PM")]
         public Nullable<System.TimeSpan> CloseTime;
     }
