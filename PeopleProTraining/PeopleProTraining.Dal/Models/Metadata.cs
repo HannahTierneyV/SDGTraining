@@ -26,6 +26,8 @@ namespace PeopleProTraining.Dal.Models
         [Display(Name="Department")]
         public string Name;
 
+        public double Budget;
+
         [Display(Name = "Building")]
         public int BuildingID;
     }
