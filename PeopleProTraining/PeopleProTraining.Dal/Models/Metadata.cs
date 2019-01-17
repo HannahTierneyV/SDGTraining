@@ -37,11 +37,9 @@ namespace PeopleProTraining.Dal.Models
         public string Name;
 
         [Display(Name = "Opens")]
-        [RegularExpression(@"((([0-1][0-9])|(2[0-3]))(:[0-5][0-9])?)", ErrorMessage = "Time must be between 00:00 to 11:59 AM/PM")]
         public Nullable<System.TimeSpan> OpenTime;
 
         [Display(Name = "Closes")]
-        [RegularExpression(@"((([0-1][0-9])|(2[0-3]))(:[0-5][0-9])?)", ErrorMessage = "Time must be between 00:00 to 11:59 AM/PM")]
         public Nullable<System.TimeSpan> CloseTime;
     }
 }

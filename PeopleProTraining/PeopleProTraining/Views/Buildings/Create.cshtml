@@ -42,6 +42,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
+                <button type="submit" value="Create" class="btn btn-default" onclick="SubmitAJAXCreate('@Url.Action("Create")')">Create</button>
             </div>
         </div>
     </div>
@@ -50,6 +51,24 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+<script>
+    function SubmitAJAXCreate(urlPath) {
+        $.ajax({
+            url: urlPath,
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            data: {
+                Name: $('#Name').val(),
+                OpenTime: $('#OpenTime').val(),
+                CloseTime: $('#CloseTime').val()
+            },
+            headers: {
+                RequestVerificationToken: $('input:hidden[name="__RequestVerificationToken"]').val()
+            }
+        });
+    }
+</script>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
